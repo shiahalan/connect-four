@@ -25,7 +25,7 @@ def drop_piece_anim(col, piece):
             row[col - 1] = f'| {p} '
             print_board()
             sleep(0.3)
-            print('\n' * 100)
+            print('\n' * 50)
             row[col-1] = '|   '
         else:
             board[board.index(row)-1][col-1] = f"| {piece.upper()} "
