@@ -40,3 +40,7 @@ def check_game(piece):
             if board[row][col] == f'| {p} ' and board[row + 1][col + 1] == f'| {p} ':
                 if board[row + 2][col + 2] == f'| {p} ' and board[row + 3][col + 3]:
                     return f"{p} wins!"
+
+
+if __name__ == '__main__':
+    check_game()

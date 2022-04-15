@@ -19,3 +19,7 @@ def drop_piece(col, piece):
     else:
         print("Not a valid input!")
         return False
+
+
+if __name__ == '__main__':
+    drop_piece()
