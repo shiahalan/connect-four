@@ -10,18 +10,6 @@ from gamestatus.animationfolder.animations import *
 
 
 def game():
-    loading_bar()
-    print()
-    print("Welcome to...")
-    sleep(2)
-    print("""
-   ______                            __     ______                
-  / ____/___  ____  ____  ___  _____/ /_   / ____/___  __  _______
- / /   / __ \/ __ \/ __ \/ _ \/ ___/ __/  / /_  / __ \/ / / / ___/
-/ /___/ /_/ / / / / / / /  __/ /__/ /_   / __/ / /_/ / /_/ / /    
-\____/\____/_/ /_/_/ /_/\___/\___/\__/  /_/    \____/\__,_/_/     
-                                                                                 
-    """)
     sleep(2)
     print_board()
     token = 'X'
@@ -33,12 +21,9 @@ def game():
                 pass
             else:
                 answered = True
-        print('\n' * 100)
         drop_piece_anim(int(answer), token)
         if check_game(token):
-            print('\n' * 100)
             print(check_game(token))
-            print_board()
             break
         if token == 'X':
             token = 'O'
@@ -46,5 +31,35 @@ def game():
             token = 'X'
 
 
-game()
+loading_bar()
+print()
+print("Welcome to...")
+sleep(2)
+print("""
+   ______                            __     ______                
+  / ____/___  ____  ____  ___  _____/ /_   / ____/___  __  _______
+ / /   / __ \/ __ \/ __ \/ _ \/ ___/ __/  / /_  / __ \/ / / / ___/
+/ /___/ /_/ / / / / / / /  __/ /__/ /_   / __/ / /_/ / /_/ / /    
+\____/\____/_/ /_/_/ /_/\___/\___/\__/  /_/    \____/\__,_/_/     
+
+    """)
+
+
+while True:
+    sleep(2)
+    decision = input("Menu\n[a]Play!\n[b]Quit!\n>")
+    if decision.lower() == 'a' or decision.lower() == 'b':
+        if decision.lower() == 'a':
+            sleep(2)
+            game()
+        else:
+            sleep(1)
+            print("See you next time!")
+            sleep(2)
+            exit()
+    else:
+        print("---------------")
+        print("Invalid option!")
+        print("---------------")
+        sleep(2)
 
