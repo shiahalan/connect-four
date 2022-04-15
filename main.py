@@ -6,7 +6,6 @@ Refactor for convenience !done
 from time import sleep
 from gamestatus.statuschecker import check_game
 from gamestatus.droppiece import drop_piece
-from gamestatus.board.theboard import *
 from gamestatus.animationfolder.animations import *
 
 
@@ -29,10 +28,13 @@ def game():
     while True:
         answered = False
         while not answered:
-            if not drop_piece(input('Enter column: '), token):
+            answer = input("Enter column: ")
+            if not drop_piece(answer, token):
                 pass
             else:
                 answered = True
+        print('\n' * 100)
+        drop_piece_anim(int(answer), token)
         if check_game(token):
             print('\n' * 100)
             print(check_game(token))
@@ -42,8 +44,6 @@ def game():
             token = 'O'
         else:
             token = 'X'
-        print('\n' * 100)
-        print_board()
 
 
 game()

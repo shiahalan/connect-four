@@ -8,7 +8,7 @@ def drop_piece(col, piece):
             row_number = 5
             for row in board[::-1]:
                 if row[column - 1] == "|   ":
-                    board[row_number][column - 1] = f"| {piece.upper()} "
+
                     return True
                 row_number -= 1
             print("Out of spaces!")

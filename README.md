@@ -12,12 +12,12 @@ If your placement was valid, let the other play take their turn (if playing with
 The game uses lists as a datastructure in order to keep track of the pieces. Various functions
 change the values in these lists.
 
-##Image
+## Image:
 ![Image of game](https://i.gyazo.com/659a968673f9455122fb89f0672c42f1.png)
 
 
-## Creator
+## Creator:
 [GitHub](https://github.com/shiahalan)
 
-### License
+### License:
 This project is under the Apache 2.0 License
