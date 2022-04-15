@@ -8,7 +8,7 @@ When prompted, enter into the terminal which column you want to place your piece
 If your placement was valid, let the other play take their turn (if playing with someone else).
 
 ## Functionality:
-The game uses lists as a datastructure in order to keep track of the pieces. Various functions
+The game uses lists as a data structure in order to keep track of the pieces. Various functions
 change the values in these lists.
 
 ## Image:
